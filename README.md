@@ -9,11 +9,21 @@
 
 | 变体 | 世界 | 画面 |
 |---|---|---|
-| 暗色 `dark` | **月读 · 夜** | 夜水蓝 × 鸟居朱红 × 月轮金：新月带三层天文轨道环、星座连线、倒悬的全息鸟居、竹苇前景框景、水面数据网格与水灯，天顶还藏着一只由星星连成的**海兔星座彩蛋**（有两颗发光的眼睛） |
+| 暗色 `dark` | **月读 · 夜** | 夜水蓝 × 鸟居朱红 × 月轮金：新月带三层天文轨道环、星座连线、倒悬的全息鸟居、竹苇前景框景、水面数据网格与水灯 |
 | 亮色 `light` | **东京 · 昼** | 暖白纸感 Colorido 风：透视电线杆群与束电线、电线上的乌鸦、狐红东京塔、平面积云、公园竹丛、自动贩卖机、逆光叶影与光斑、飘散的音符与樱瓣 |
 
 两张壁纸都做了**远 / 中 / 近三层景深**（远景雾化、中景微糊、近景清晰）+
 大气雾带，避免整屏插画与 UI 文字抢焦点。
+
+## 效果预览
+
+| 暗色 · 月读（夜） | 亮色 · 东京（昼） |
+|:---:|:---:|
+| ![月读·夜](preview/dark.svg) | ![东京·昼](preview/light.svg) |
+
+> 预览图是 `preview/` 下的界面示意图（SVG，仓库内点开文件可看大图）。
+> 实际效果以安装后为准：壁纸从半透明面板下透出，暗色模式另有流星群
+> canvas 动效（流星落入水面泛涟漪）。
 
 ## 动效
 
@@ -24,15 +34,36 @@
 
 ## 安装
 
+**方式一 · GitHub 一行安装（推荐）**
+
 ```powershell
-dsh plugin --profile web add 'github:DaydreAmRing/dsh-cho-kaguya-plugin'
+dsh plugin --profile web add 'github:DaydreAmRing/dsh-cho-kaguya-plugin-public'
 dsh web
 ```
 
-安装后在设置中启用本插件。**皮肤互斥**：请同时把皮肤中心（skin-center）
-的皮肤切回「默认」——两套皮肤同时应用会重复定义 token（本插件自带全套样式）。
+**方式二 · 克隆到本地安装**
+
+```powershell
+git clone https://github.com/DaydreAmRing/dsh-cho-kaguya-plugin-public.git
+dsh plugin --profile web add D:\path\to\dsh-cho-kaguya-plugin-public
+dsh web
+```
+
+**方式三 · 本地开发模式（link: 联调，改代码刷新即生效）**
+
+```powershell
+dsh plugin --profile web add link:D:/path/to/dsh-cho-kaguya-plugin-public
+```
+
+> `link:` 后请用正斜杠（Git Bash 里反斜杠会被转义）；受限环境 junction
+> 建不起来时退回方式二。
+
+三种方式装完都在设置中启用本插件。**皮肤互斥**：请同时把皮肤中心
+（skin-center）的皮肤切回「默认」——两套皮肤同时应用会重复定义 token
+（本插件自带全套样式）。
 
 > ⚠️ client-inject 型皮肤在**重启 web 后**才完全生效，装完建议重启一次。
+> 自定义立绘（见下节）需要本机安装 Node.js。
 
 ## 自定义立绘（可选）
 
@@ -117,7 +148,7 @@ dsh-cho-kaguya-plugin/
 
 ## 更新日志
 
-- **v0.6.2**：公开首发。三层景深双背景 + 海兔星座彩蛋；流星群 canvas 粒子化
+- **v0.6.2**：公开首发。三层景深双背景 ；流星群 canvas 粒子化
   + 落水涟漪；立绘槽位通用化（`assets/standees/` 自动扫描，仓库不附带图片）。
 - **v0.5.x**：双背景体系、立绘防遮挡让位机制、模板构建流水线（魔数/语法双重校验）。
 
