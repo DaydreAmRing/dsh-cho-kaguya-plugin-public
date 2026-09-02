@@ -1,0 +1,28 @@
+{
+  "id": "cho-kaguya",
+  "name": "月读 · 夜与昼",
+  "nameEn": "Tsukuyomi: Night & Day",
+  "author": "derived from maid-atelier by Small-tailqwq",
+  "tagline": "和风夜水与现实东京的双世界主题：三层景深壁纸、流星群动效、海兔星座彩蛋、半透明水面面板",
+  "description": "一套面向 DeepSeek Harness WebUI 的双世界主题皮肤。暗色模式进入「月读」——夜水蓝的天空下流星划过，鸟居浮于水面，天文轨道环托起新月，竹林苇丛框景，远处藏着一只由星星连成的海兔星座彩蛋；亮色模式回到现实东京的暖白日常，电线杆与乌鸦、东京塔与贩卖机，逆光叶影与光斑。壁纸做了远/中/近三层景深处理，面板统一半透明、随主题自动分色。双世界意象取自动画电影《超时空辉夜姬！》，本仓库不含任何角色素材；立绘槽位开放，可放入自备图片。",
+  "tags": [
+    "tsukuyomi",
+    "torii",
+    "night",
+    "glass",
+    "tokyo",
+    "dual-theme"
+  ],
+  "accent": "#E8C57C",
+  "bodyAttr": "data-dsh-cho-kaguya",
+  "package": "@dsh-external/dsh-client-ui-skin-cho-kaguya",
+  "wiring": {
+    "id": "ui-skin-cho-kaguya",
+    "bundleWired": false
+  },
+  "preview": {
+    "light": "preview/light.svg",
+    "dark": "preview/dark.svg"
+  },
+  "order": 7
+}

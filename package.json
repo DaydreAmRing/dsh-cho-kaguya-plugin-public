@@ -1,0 +1,42 @@
+{
+  "name": "@dsh-external/dsh-client-ui-skin-cho-kaguya",
+  "description": "Tsukuyomi: Night & Day - dual-world backdrop skin plugin for the DeepSeek Harness web GUI (Tsukuyomi night water / Tokyo daytime), meteor-shower canvas, FUSHI constellation, lunar UI accents. Standee-free public build: bring your own images via assets/standees/.",
+  "version": "0.6.2",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./skin.json": "./skin.json",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "embed:assets": "node tools/embed-assets.cjs"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/client.template.js",
+    "lib/art.js",
+    "cordis.patch.yml",
+    "skin.json",
+    "assets",
+    "preview",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
+}

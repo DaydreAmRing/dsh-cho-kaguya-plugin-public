@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- 现实 · 东京日常（亮色壁纸 v3：三层景深——远景雾化/中景微糊/近景清晰/前景逆光叶影+bokeh） -->
+  <defs>
+    <linearGradient id="day" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDFBF5"/>
+      <stop offset="60%" stop-color="#F8F3E7"/>
+      <stop offset="100%" stop-color="#F2EBDA"/>
+    </linearGradient>
+    <radialGradient id="sunhalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8C57C" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E8C57C" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 景深滤镜 -->
+    <filter id="farblur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="midblur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="0.8"/></filter>
+    <filter id="fgblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
+    <!-- 水平雾带（午后湿气，暖奶油色） -->
+    <linearGradient id="hazefar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F2E9D4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F2E9D4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F2E9D4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hazenear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDE3CC" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#EDE3CC" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#EDE3CC" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 底部暖角 -->
+    <linearGradient id="bottomfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C7B089" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#C7B089" stop-opacity="0.32"/>
+    </linearGradient>
+    <!-- bokeh 光斑（午后树影间漏光） -->
+    <radialGradient id="bokeh" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8C57C" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#E8C57C" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#E8C57C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============ 远景层 FAR：天·云·远处都市·东京塔·音符 ============ -->
+  <rect width="1920" height="1080" fill="url(#day)"/>
+  <circle cx="1560" cy="240" r="300" fill="url(#sunhalo)"/>
+
+  <!-- 平面积云 -->
+  <g>
+    <path d="M180 200 q26 -44 78 -34 q20 -36 70 -26 q50 -10 62 32 q32 6 26 32 q-6 20 -38 19 h-182 q-28 -2 -16 -23 Z" fill="#FFFDF8"/>
+    <path d="M186 213 h192 q6 8 -4 12 h-180 q-10 -4 -8 -12 Z" fill="#EFE6D0" opacity="0.8"/>
+    <path d="M840 130 q20 -34 60 -26 q16 -28 54 -20 q38 -8 48 24 q24 5 20 26 q-5 16 -30 15 h-140 q-22 -2 -12 -19 Z" fill="#FFFDF8"/>
+    <path d="M846 142 h148 q5 6 -3 9 h-138 q-8 -3 -7 -9 Z" fill="#EFE6D0" opacity="0.7"/>
+    <path d="M1310 250 q16 -26 46 -20 q12 -20 42 -15 q30 -6 36 18 q18 4 15 20 q-4 12 -24 11 h-106 q-16 -1 -9 -14 Z" fill="#FFFDF8" opacity="0.95"/>
+  </g>
+
+  <!-- 远景都市剪影（退进午后湿霭） -->
+  <g fill="#E6DDC8" opacity="0.8" filter="url(#farblur)">
+    <rect x="120" y="620" width="90" height="180"/>
+    <rect x="230" y="560" width="60" height="240"/>
+    <rect x="310" y="650" width="120" height="150"/>
+    <rect x="1380" y="600" width="80" height="200"/>
+    <rect x="1480" y="640" width="110" height="160"/>
+    <rect x="1610" y="570" width="70" height="230"/>
+    <rect x="1700" y="630" width="100" height="170"/>
+  </g>
+
+  <!-- 东京塔剪影（远处，随远景一起微糊） -->
+  <g fill="#C94A3D" opacity="0.6" filter="url(#farblur)">
+    <path d="M1656 470 l3 14 4 0 20 316 -54 0 20 -316 4 0 Z"/>
+    <rect x="1638" y="640" width="56" height="7" rx="3"/>
+    <rect x="1646" y="720" width="40" height="6" rx="3"/>
+    <rect x="1654" y="436" width="4" height="36"/>
+  </g>
+
+  <!-- 飘散的音符（远景漂浮符号） -->
+  <g fill="#C94A3D" opacity="0.26" filter="url(#farblur)">
+    <g transform="translate(1130,290) rotate(-12)">
+      <ellipse cx="0" cy="0" rx="6" ry="4.5" transform="rotate(-20)"/>
+      <rect x="4.5" y="-26" width="2.6" height="27"/>
+      <path d="M4.5 -26 q10 2 12 10 l-2.6 1 q-2 -6 -9.4 -7 Z"/>
+    </g>
+    <g transform="translate(1225,240) rotate(10) scale(0.85)">
+      <ellipse cx="0" cy="0" rx="6" ry="4.5" transform="rotate(-20)"/>
+      <rect x="4.5" y="-26" width="2.6" height="27"/>
+      <path d="M4.5 -26 q10 2 12 10 l-2.6 1 q-2 -6 -9.4 -7 Z"/>
+    </g>
+    <g transform="translate(1290,330) rotate(-6) scale(0.7)">
+      <ellipse cx="0" cy="0" rx="6" ry="4.5" transform="rotate(-20)"/>
+      <rect x="4.5" y="-26" width="2.6" height="27"/>
+      <path d="M4.5 -26 q10 2 12 10 l-2.6 1 q-2 -6 -9.4 -7 Z"/>
+    </g>
+  </g>
+
+  <!-- 远景雾带（地平线湿霭） -->
+  <rect x="0" y="580" width="1920" height="140" fill="url(#hazefar)"/>
+
+  <!-- ============ 中景层 MID：近处楼宇·竹丛·电线杆群（微糊后退） ============ -->
+  <g filter="url(#midblur)">
+    <g fill="#DDD2B8" opacity="0.95">
+      <rect x="60" y="680" width="140" height="220"/>
+      <rect x="420" y="700" width="100" height="200"/>
+      <rect x="1240" y="690" width="130" height="210"/>
+      <rect x="1560" y="710" width="90" height="190"/>
+    </g>
+    <g fill="#FAF6EE" opacity="0.7">
+      <rect x="80" y="700" width="12" height="12"/><rect x="110" y="700" width="12" height="12"/><rect x="140" y="730" width="12" height="12"/><rect x="80" y="760" width="12" height="12"/>
+      <rect x="440" y="720" width="12" height="12"/><rect x="480" y="720" width="12" height="12"/><rect x="460" y="760" width="12" height="12"/>
+      <rect x="1260" y="710" width="12" height="12"/><rect x="1300" y="710" width="12" height="12"/><rect x="1330" y="750" width="12" height="12"/><rect x="1260" y="780" width="12" height="12"/>
+      <rect x="1580" y="730" width="12" height="12"/><rect x="1620" y="730" width="12" height="12"/><rect x="1600" y="770" width="12" height="12"/>
+    </g>
+
+    <!-- 公园竹丛 -->
+    <g>
+      <g fill="#A9BFA4">
+        <rect x="316" y="660" width="8" height="170" rx="4"/>
+        <rect x="342" y="690" width="7" height="140" rx="3"/>
+        <rect x="366" y="640" width="9" height="190" rx="4"/>
+        <rect x="388" y="700" width="7" height="130" rx="3"/>
+      </g>
+      <g stroke="#8AA389" stroke-width="1.5">
+        <line x1="316" y1="700" x2="324" y2="700"/><line x1="316" y1="760" x2="324" y2="760"/>
+        <line x1="366" y1="680" x2="375" y2="680"/><line x1="366" y1="740" x2="375" y2="740"/>
+      </g>
+      <g fill="#93AF8E">
+        <path d="M375 632 q20 -14 34 -6 q-18 14 -34 6 Z"/>
+        <path d="M375 648 q-20 -12 -32 -4 q18 12 32 4 Z"/>
+        <path d="M325 652 q18 -12 30 -6 q-16 13 -30 6 Z"/>
+      </g>
+    </g>
+
+    <!-- 电线杆群（透视）：主杆居中 + 左右两根渐远 -->
+    <g opacity="0.96">
+      <rect x="960" y="360" width="16" height="500" fill="#C9BCA0"/>
+      <rect x="920" y="400" width="96" height="10" rx="5" fill="#C9BCA0"/>
+      <rect x="932" y="440" width="72" height="8" rx="4" fill="#C9BCA0"/>
+      <rect x="470" y="470" width="12" height="390" fill="#CFC3A8"/>
+      <rect x="438" y="502" width="76" height="8" rx="4" fill="#CFC3A8"/>
+      <rect x="448" y="538" width="56" height="6" rx="3" fill="#CFC3A8"/>
+      <rect x="1418" y="450" width="13" height="410" fill="#CFC3A8"/>
+      <rect x="1384" y="484" width="80" height="8" rx="4" fill="#CFC3A8"/>
+      <rect x="1396" y="520" width="58" height="6" rx="3" fill="#CFC3A8"/>
+      <rect x="952" y="466" width="32" height="26" rx="4" fill="#C2B497"/>
+      <rect x="462" y="556" width="26" height="20" rx="3" fill="#C6BA9E"/>
+    </g>
+
+    <!-- 电线 -->
+    <g fill="none" stroke="#C9BCA0" stroke-width="2" opacity="0.9">
+      <path d="M920 405 Q640 468 470 506"/>
+      <path d="M1016 405 Q1300 468 1424 488"/>
+      <path d="M932 444 Q700 498 500 541"/>
+      <path d="M1004 444 Q1240 496 1424 523"/>
+      <path d="M920 405 Q640 468 320 460 Q180 456 60 480"/>
+      <path d="M1016 405 Q1300 468 1620 455 Q1760 450 1860 475"/>
+    </g>
+
+    <!-- 电线上的乌鸦 -->
+    <g fill="#4A4337" opacity="0.9">
+      <path d="M690 459 c3 -6 8 -6 10 0 c3 -6 8 -6 10 0 l-3 4 h-14 Z"/>
+      <path d="M860 421 c2.4 -5 6.5 -5 8 0 c2.4 -5 6.5 -5 8 0 l-2.4 3.2 h-11.2 Z"/>
+      <path d="M1180 443 c2.6 -5.5 7 -5.5 9 0 c2.6 -5.5 7 -5.5 9 0 l-2.6 3.6 h-12.8 Z"/>
+      <path d="M1330 474 c2 -4.5 5.5 -4.5 7 0 c2 -4.5 5.5 -4.5 7 0 l-2 3 h-10 Z"/>
+    </g>
+  </g>
+
+  <!-- 七彩微光信号灯（主杆上，近一点保持清晰但不抢） -->
+  <g>
+    <circle cx="968" cy="425" r="9" fill="#ED93B1"/>
+    <circle cx="946" cy="425" r="7" fill="#E8C57C" opacity="0.9"/>
+    <circle cx="990" cy="425" r="7" fill="#6FD9E7" opacity="0.9"/>
+    <circle cx="968" cy="425" r="20" fill="#ED93B1" opacity="0.18"/>
+  </g>
+
+  <!-- 近景雾带（漫过楼脚） -->
+  <rect x="0" y="840" width="1920" height="130" fill="url(#hazenear)"/>
+
+  <!-- ============ 近景层 NEAR：地面·贩卖机·樱瓣（清晰） ============ -->
+  <rect y="900" width="1920" height="180" fill="#EFE7D2"/>
+  <g stroke="#E2D8BE" stroke-width="2">
+    <line x1="0" y1="960" x2="1920" y2="960"/>
+    <line x1="0" y1="1020" x2="1920" y2="1020"/>
+  </g>
+  <g stroke="#E7DDC4" stroke-width="1.5" opacity="0.7">
+    <line x1="380" y1="900" x2="360" y2="1080"/>
+    <line x1="1180" y1="900" x2="1196" y2="1080"/>
+    <line x1="1640" y1="900" x2="1626" y2="1080"/>
+  </g>
+
+  <!-- 自动贩卖机 -->
+  <g>
+    <ellipse cx="248" cy="918" rx="86" ry="10" fill="#E2D8BE" opacity="0.8"/>
+    <rect x="196" y="768" width="104" height="146" rx="8" fill="#EFE9DC" stroke="#D8CEB8" stroke-width="2"/>
+    <rect x="208" y="782" width="56" height="102" rx="4" fill="#CDEAE2"/>
+    <g>
+      <rect x="214" y="790" width="10" height="13" fill="#ED93B1"/><rect x="230" y="790" width="10" height="13" fill="#E8C57C"/>
+      <rect x="246" y="790" width="10" height="13" fill="#6FD9E7"/><rect x="214" y="812" width="10" height="13" fill="#C94A3D"/>
+      <rect x="230" y="812" width="10" height="13" fill="#7BC98F"/><rect x="246" y="812" width="10" height="13" fill="#E8C57C"/>
+      <rect x="214" y="834" width="10" height="13" fill="#6FD9E7"/><rect x="230" y="834" width="10" height="13" fill="#ED93B1"/>
+      <rect x="246" y="834" width="10" height="13" fill="#C94A3D"/><rect x="214" y="856" width="10" height="13" fill="#E8C57C"/>
+      <rect x="230" y="856" width="10" height="13" fill="#6FD9E7"/>
+    </g>
+    <rect x="272" y="786" width="18" height="94" rx="3" fill="#F7E7B0"/>
+    <rect x="270" y="892" width="22" height="8" rx="2" fill="#C2B497"/>
+    <rect x="196" y="914" width="104" height="6" fill="#D8CEB8"/>
+  </g>
+
+  <!-- 飘落的樱瓣 + 风的轨迹 -->
+  <g fill="#ED93B1" opacity="0.55">
+    <path d="M300 300 q10 -12 20 0 q-10 12 -20 0"/>
+    <path d="M1500 420 q8 -10 16 0 q-8 10 -16 0"/>
+    <path d="M700 220 q7 -9 14 0 q-7 9 -14 0"/>
+    <path d="M520 520 q8 -10 16 0 q-8 10 -16 0"/>
+    <path d="M1050 180 q6 -8 12 0 q-6 8 -12 0"/>
+    <path d="M1250 600 q9 -11 18 0 q-9 11 -18 0"/>
+    <path d="M180 640 q6 -8 12 0 q-6 8 -12 0"/>
+    <path d="M1720 560 q7 -9 14 0 q-7 9 -14 0"/>
+  </g>
+  <g fill="none" stroke="#ED93B1" stroke-width="1" opacity="0.2">
+    <path d="M520 500 q80 -30 170 -6"/>
+    <path d="M1030 170 q90 -26 180 10"/>
+  </g>
+
+  <!-- 底部暖角 -->
+  <rect x="0" y="880" width="1920" height="200" fill="url(#bottomfade)"/>
+
+  <!-- ============ 前景 FOREGROUND：逆光叶影 + bokeh 光斑（透过树叶的午后） ============ -->
+  <!-- bokeh 光斑（树影间漏光，最前层光感） -->
+  <g>
+    <circle cx="240" cy="300" r="46" fill="url(#bokeh)"/>
+    <circle cx="420" cy="520" r="30" fill="url(#bokeh)"/>
+    <circle cx="1700" cy="620" r="52" fill="url(#bokeh)"/>
+    <circle cx="1520" cy="840" r="26" fill="url(#bokeh)"/>
+    <circle cx="620" cy="180" r="34" fill="url(#bokeh)"/>
+  </g>
+  <!-- 逆光叶影（暗暖棕，虚化，溢出画面） -->
+  <g filter="url(#fgblur)">
+    <!-- 左下叶丛 -->
+    <g fill="#6B5535" opacity="0.88">
+      <path d="M-20 900 q120 -60 210 -10 q-100 50 -210 10 Z"/>
+      <path d="M-30 1000 q100 -80 200 -40 q-90 70 -200 40 Z"/>
+      <path d="M60 1080 q40 -90 130 -110 q-20 90 -130 110 Z"/>
+      <path d="M-10 820 q80 -50 150 -20 q-70 60 -150 20 Z"/>
+    </g>
+    <!-- 右下叶丛 -->
+    <g fill="#6B5535" opacity="0.88">
+      <path d="M1940 880 q-130 -60 -220 -6 q110 54 220 6 Z"/>
+      <path d="M1950 990 q-110 -76 -205 -32 q100 68 205 32 Z"/>
+      <path d="M1840 1080 q-40 -90 -135 -104 q24 88 135 104 Z"/>
+    </g>
+    <!-- 左上垂枝 -->
+    <g fill="#6B5535" opacity="0.8">
+      <path d="M-16 26 q90 30 130 96 q-54 -12 -80 -44 q-28 -30 -50 -52 Z"/>
+      <path d="M58 70 q42 -26 80 -14 q-38 32 -80 14 Z"/>
+      <path d="M98 116 q38 -18 70 -4 q-34 26 -70 4 Z"/>
+    </g>
+    <!-- 右上垂枝 -->
+    <g fill="#6B5535" opacity="0.8">
+      <path d="M1936 16 q-84 32 -118 98 q52 -14 76 -46 q24 -30 42 -52 Z"/>
+      <path d="M1866 66 q-42 -24 -78 -10 q36 30 78 10 Z"/>
+      <path d="M1834 114 q-36 -16 -64 0 q30 24 64 0 Z"/>
+    </g>
+  </g>
+</svg>

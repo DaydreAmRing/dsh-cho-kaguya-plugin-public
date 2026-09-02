@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800">
+  <!-- 预览 · 现实·东京日常（亮色版）：暖白纸感 + 狐红点缀 -->
+  <defs>
+    <linearGradient id="pv-day" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDFBF5"/><stop offset="100%" stop-color="#F2EBDA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#pv-day)"/>
+  <circle cx="1040" cy="160" r="120" fill="#E8C57C" opacity="0.18"/>
+  <g fill="#E6DDC8">
+    <rect x="80" y="520" width="90" height="180"/><rect x="190" y="470" width="60" height="230"/>
+    <rect x="1100" y="500" width="80" height="200"/><rect x="1200" y="540" width="60" height="160"/>
+  </g>
+  <g fill="#ED93B1" opacity="0.5">
+    <path d="M220 240 q9 -11 18 0 q-9 11 -18 0"/>
+    <path d="M980 320 q8 -10 16 0 q-8 10 -16 0"/>
+  </g>
+
+  <!-- 界面框架示意 -->
+  <rect x="90" y="70" width="1100" height="660" rx="14" fill="#FFFFFF" stroke="#DDD3BC"/>
+  <!-- 顶栏 -->
+  <rect x="90" y="70" width="1100" height="46" rx="14" fill="#F4EEDF" stroke="#DDD3BC"/>
+  <rect x="90" y="100" width="1100" height="16" fill="#F4EEDF"/>
+  <circle cx="122" cy="93" r="11" fill="#E8C57C"/><circle cx="117" cy="90" r="9" fill="#F4EEDF"/>
+  <rect x="145" y="85" width="150" height="16" rx="8" fill="#38332B"/>
+  <rect x="310" y="82" width="64" height="22" rx="11" fill="rgba(201,74,61,0.08)" stroke="#C94A3D"/>
+  <rect x="320" y="92" width="44" height="6" rx="3" fill="#C94A3D"/>
+  <!-- 侧栏 -->
+  <rect x="90" y="116" width="230" height="614" fill="#F4EEDF"/>
+  <rect x="90" y="116" width="230" height="614" fill="none" stroke="#DDD3BC"/>
+  <rect x="106" y="136" width="80" height="8" rx="4" fill="#948A7A"/>
+  <rect x="106" y="158" width="198" height="40" rx="8" fill="#EFE5CE" stroke="#C94A3D" stroke-width="0.8"/>
+  <rect x="118" y="168" width="120" height="8" rx="4" fill="#38332B"/>
+  <rect x="118" y="182" width="70" height="6" rx="3" fill="#948A7A"/>
+  <rect x="106" y="210" width="160" height="10" rx="5" fill="#6E6558" opacity="0.45"/>
+  <rect x="106" y="234" width="130" height="10" rx="5" fill="#6E6558" opacity="0.45"/>
+  <rect x="106" y="258" width="150" height="10" rx="5" fill="#6E6558" opacity="0.45"/>
+  <!-- 消息区 -->
+  <rect x="360" y="150" width="480" height="52" rx="12" fill="#FBEF0F" opacity="0"/>
+  <rect x="360" y="150" width="480" height="52" rx="12" fill="#E1EFD9" stroke="#BFD8B2"/>
+  <rect x="940" y="150" width="220" height="52" rx="12" fill="#FFFFFF" stroke="#DDD3BC"/>
+  <rect x="360" y="240" width="600" height="84" rx="12" fill="#FFFFFF" stroke="#E9E1CE"/>
+  <rect x="360" y="240" width="3" height="84" rx="1.5" fill="#C94A3D"/>
+  <rect x="380" y="256" width="520" height="10" rx="5" fill="#38332B" opacity="0.8"/>
+  <rect x="380" y="276" width="440" height="10" rx="5" fill="#38332B" opacity="0.55"/>
+  <rect x="380" y="296" width="300" height="10" rx="5" fill="#38332B" opacity="0.35"/>
+  <!-- 输入区 -->
+  <rect x="360" y="620" width="800" height="56" rx="14" fill="#FFFFFF" stroke="#DDD3BC"/>
+  <rect x="382" y="644" width="300" height="10" rx="5" fill="#948A7A"/>
+  <circle cx="1118" cy="648" r="18" fill="#C94A3D"/>
+  <path d="M1111 655 L1125 641 M1125 641 L1116 641 M1125 641 L1125 650" stroke="#FFF8EF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="360" y="690" width="420" height="8" rx="4" fill="#A79C8B"/>
+  <!-- 标题 -->
+  <text x="90" y="40" font-family="sans-serif" font-size="22" fill="#38332B" font-weight="500">现实 · Reality（亮色）</text>
+  <text x="90" y="770" font-family="sans-serif" font-size="14" fill="#948A7A">暖白 #FAF6EE · 狐红 #C94A3D · 月轮金 #E8C57C · 樱粉 #ED93B1</text>
+</svg>

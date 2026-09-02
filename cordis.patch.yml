@@ -1,0 +1,7 @@
+# cho-kaguya skin bundle patch: inserts its public dsh.client entry into
+# the web plugin roster. Install it with
+# `dsh plugin --profile web add <path>`; mutual exclusion between skins is
+# managed by the dsh skin switching layer.
+- insert:
+    - id: ui-skin-cho-kaguya
+      name: '@dsh-external/dsh-client-ui-skin-cho-kaguya'

@@ -1,0 +1,285 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- 月读 · 虚拟空间（暗色壁纸 v3：三层景深——远景雾化/中景微糊/近景清晰/前景剪影框景） -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1024"/>
+      <stop offset="55%" stop-color="#101A38"/>
+      <stop offset="100%" stop-color="#0E1E33"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12233F"/>
+      <stop offset="100%" stop-color="#0A1226"/>
+    </linearGradient>
+    <radialGradient id="moonglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F2D998" stop-opacity="0.5"/>
+      <stop offset="45%" stop-color="#E8C57C" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#E8C57C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="holodrip" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
+      <stop offset="0%" stop-color="#6FD9E7" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#6FD9E7" stop-opacity="0.4"/>
+    </linearGradient>
+    <!-- 景深滤镜 -->
+    <filter id="farblur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <filter id="midblur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="0.8"/></filter>
+    <filter id="fgblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
+    <!-- 大气雾带：上下渐隐的水平带 -->
+    <linearGradient id="fogfar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B2E55" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#1B2E55" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#1B2E55" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fognear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F1D3A" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0F1D3A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0F1D3A" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 底部暗角（把画面「放」进空间里） -->
+    <linearGradient id="bottomfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060C1C" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#060C1C" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============ 远景层 FAR：天·星·月·全息鸟居（对比度整体调低） ============ -->
+  <rect width="1920" height="640" fill="url(#sky)"/>
+  <rect y="640" width="1920" height="440" fill="url(#water)"/>
+
+  <g opacity="0.82" fill="#C7CCE0">
+    <circle cx="180" cy="90" r="1.4"/><circle cx="420" cy="200" r="1"/><circle cx="660" cy="60" r="1.6"/>
+    <circle cx="900" cy="150" r="1"/><circle cx="1180" cy="80" r="1.3"/><circle cx="1450" cy="190" r="1"/>
+    <circle cx="1680" cy="70" r="1.5"/><circle cx="260" cy="320" r="1"/><circle cx="540" cy="360" r="1.2"/>
+    <circle cx="820" cy="280" r="1"/><circle cx="1120" cy="330" r="1.4"/><circle cx="1400" cy="290" r="1"/>
+    <circle cx="1750" cy="330" r="1.2"/><circle cx="100" cy="450" r="1"/><circle cx="1840" cy="480" r="1.3"/>
+    <circle cx="330" cy="180" r="1"/><circle cx="500" cy="120" r="1.1"/><circle cx="760" cy="220" r="1"/>
+    <circle cx="1040" cy="60" r="1.2"/><circle cx="1300" cy="160" r="1"/><circle cx="1600" cy="110" r="1.4"/>
+    <circle cx="190" cy="260" r="1"/><circle cx="620" cy="150" r="1"/><circle cx="960" cy="240" r="1.1"/>
+  </g>
+  <g opacity="0.85">
+    <circle cx="248" cy="86" r="1.6" fill="#E8C57C"/><circle cx="438" cy="98" r="1.6" fill="#E8C57C"/>
+    <circle cx="612" cy="122" r="1.4" fill="#6FD9E7"/><circle cx="1035" cy="245" r="1.5" fill="#E8C57C"/>
+    <circle cx="1608" cy="112" r="1.4" fill="#6FD9E7"/><circle cx="828" cy="282" r="1.5" fill="#E8C57C"/>
+  </g>
+
+  <!-- FUSHI 星座（毛茸茸海兔：11 颗星围出身体 + 头顶小星 + 两颗发光的眼睛） -->
+  <g stroke="#C7CCE0" stroke-width="0.8" opacity="0.28" fill="none" stroke-linecap="round">
+    <polyline points="1080,110 1120,150 1085,195 1000,230 880,250 745,235 700,200 665,165 730,130 870,110 1000,95 1080,110"/>
+    <line x1="1080" y1="110" x2="1100" y2="60"/>
+  </g>
+  <g fill="#C7CCE0">
+    <circle cx="1080" cy="110" r="2"/>
+    <circle cx="1120" cy="150" r="1.8"/>
+    <circle cx="1085" cy="195" r="1.8"/>
+    <circle cx="1000" cy="230" r="2"/>
+    <circle cx="880" cy="250" r="2.2"/>
+    <circle cx="745" cy="235" r="1.8"/>
+    <circle cx="700" cy="200" r="1.6"/>
+    <circle cx="665" cy="165" r="1.4"/>
+    <circle cx="730" cy="130" r="1.8"/>
+    <circle cx="870" cy="110" r="2"/>
+    <circle cx="1000" cy="95" r="2"/>
+  </g>
+  <!-- 眼睛：两颗发光的星（月金核 + 金晕） -->
+  <g>
+    <circle cx="1088" cy="145" r="5.5" fill="#E8C57C" opacity="0.26"/>
+    <circle cx="1088" cy="145" r="1.7" fill="#F2D998" opacity="0.95"/>
+    <circle cx="1110" cy="148" r="5.5" fill="#E8C57C" opacity="0.26"/>
+    <circle cx="1110" cy="148" r="1.7" fill="#F2D998" opacity="0.95"/>
+  </g>
+  <!-- 头顶小星（最亮，fushi 的标志性黑星 → 暖金呈现） -->
+  <circle cx="1100" cy="60" r="2.8" fill="#E8C57C" opacity="0.62"/>
+  <g stroke="#E8C57C" stroke-width="0.6" stroke-linecap="round" opacity="0.4">
+    <line x1="1100" y1="48" x2="1100" y2="44"/>
+    <line x1="1100" y1="76" x2="1100" y2="80"/>
+    <line x1="1088" y1="60" x2="1084" y2="60"/>
+    <line x1="1116" y1="60" x2="1120" y2="60"/>
+  </g>
+
+  <!-- 倒悬全息鸟居 + 天顶光柱（全息体自带虚化） -->
+  <g fill="#6FD9E7" opacity="0.26" filter="url(#farblur)">
+    <g transform="rotate(180 230 130)">
+      <path d="M158 96 Q230 76 302 96 L296 114 Q230 96 164 114 Z"/>
+      <path d="M172 122 Q230 106 288 122 L284 132 Q230 118 176 132 Z"/>
+      <rect x="188" y="118" width="13" height="78"/>
+      <rect x="259" y="118" width="13" height="78"/>
+      <rect x="178" y="146" width="104" height="9"/>
+    </g>
+  </g>
+  <line x1="194.5" y1="0" x2="194.5" y2="64" stroke="url(#holodrip)" stroke-width="5"/>
+  <line x1="265.5" y1="0" x2="265.5" y2="64" stroke="url(#holodrip)" stroke-width="5"/>
+
+  <!-- 月轮 + 天文轨道环（光源，保持清晰） -->
+  <g transform="rotate(-15 1490 250)">
+    <ellipse cx="1490" cy="250" rx="150" ry="56" fill="none" stroke="#E8C57C" stroke-width="1" stroke-dasharray="2 7" opacity="0.3"/>
+    <ellipse cx="1490" cy="250" rx="205" ry="78" fill="none" stroke="#E8C57C" stroke-width="1" stroke-dasharray="2 9" opacity="0.2"/>
+    <ellipse cx="1490" cy="250" rx="262" ry="102" fill="none" stroke="#E8C57C" stroke-width="1" stroke-dasharray="2 11" opacity="0.12"/>
+    <circle cx="1640" cy="196" r="3" fill="#E8C57C" opacity="0.55"/>
+    <circle cx="1288" cy="304" r="2.2" fill="#6FD9E7" opacity="0.5"/>
+  </g>
+  <circle cx="1490" cy="250" r="260" fill="url(#moonglow)"/>
+  <circle cx="1490" cy="250" r="88" fill="#F2D998"/>
+  <circle cx="1526" cy="222" r="76" fill="#101A38"/>
+  <circle cx="1456" cy="286" r="9" fill="#E5CE8A" opacity="0.5"/>
+  <circle cx="1480" cy="300" r="5" fill="#E5CE8A" opacity="0.4"/>
+
+  <!-- 静态流星 -->
+  <g stroke="#F2D998" stroke-linecap="round" opacity="0.8">
+    <line x1="220" y1="170" x2="320" y2="270" stroke-width="2.4"/>
+    <line x1="232" y1="172" x2="296" y2="236" stroke-width="1" opacity="0.5"/>
+    <line x1="1620" y1="330" x2="1700" y2="410" stroke-width="1.8"/>
+    <line x1="1612" y1="352" x2="1662" y2="402" stroke-width="1" opacity="0.45"/>
+  </g>
+
+  <!-- 远处小鸟居（退到雾里：更淡 + 模糊） -->
+  <g fill="#D8544A" opacity="0.34" filter="url(#farblur)">
+    <path d="M1524 640 Q1560 632 1596 640 L1593 648 Q1560 641 1527 648 Z"/>
+    <rect x="1538" y="644" width="6" height="34"/>
+    <rect x="1576" y="644" width="6" height="34"/>
+    <rect x="1534" y="656" width="52" height="5"/>
+  </g>
+
+  <!-- 远景雾带（水平线上，把天与水分开） -->
+  <rect x="0" y="580" width="1920" height="150" fill="url(#fogfar)"/>
+
+  <!-- ============ 中景层 MID：主鸟居（主体保持清晰）+ 两侧竹林（微糊） ============ -->
+  <g opacity="0.95">
+    <g fill="#D8544A">
+      <path d="M438 552 Q560 522 682 552 L672 578 Q560 550 448 578 Z"/>
+      <path d="M456 590 Q560 566 664 590 L658 604 Q560 582 462 604 Z"/>
+      <rect x="478" y="576" width="24" height="256"/>
+      <rect x="618" y="576" width="24" height="256"/>
+      <rect x="462" y="640" width="196" height="16"/>
+    </g>
+    <g fill="#8C3A34">
+      <rect x="472" y="826" width="36" height="14"/>
+      <rect x="612" y="826" width="36" height="14"/>
+    </g>
+    <g fill="#D8544A" opacity="0.22">
+      <rect x="478" y="846" width="24" height="86"/>
+      <rect x="618" y="846" width="24" height="86"/>
+      <rect x="462" y="846" width="196" height="9"/>
+    </g>
+  </g>
+
+  <!-- 两侧竹林（中景，微糊后退） -->
+  <g filter="url(#midblur)">
+    <g fill="#1E4A52">
+      <rect x="46" y="330" width="13" height="310" rx="6"/>
+      <rect x="86" y="420" width="11" height="220" rx="5"/>
+      <rect x="118" y="290" width="14" height="350" rx="6"/>
+      <rect x="156" y="470" width="10" height="170" rx="5"/>
+      <rect x="1796" y="360" width="13" height="280" rx="6"/>
+      <rect x="1836" y="300" width="14" height="340" rx="6"/>
+      <rect x="1872" y="450" width="11" height="190" rx="5"/>
+    </g>
+    <g stroke="#0E2830" stroke-width="2">
+      <line x1="46" y1="380" x2="59" y2="380"/><line x1="46" y1="470" x2="59" y2="470"/><line x1="46" y1="560" x2="59" y2="560"/>
+      <line x1="118" y1="340" x2="132" y2="340"/><line x1="118" y1="430" x2="132" y2="430"/><line x1="118" y1="530" x2="132" y2="530"/>
+      <line x1="1836" y1="350" x2="1850" y2="350"/><line x1="1836" y1="450" x2="1850" y2="450"/><line x1="1836" y1="540" x2="1850" y2="540"/>
+    </g>
+    <g fill="#245C56">
+      <path d="M59 320 q26 -18 44 -8 q-24 18 -44 8 Z"/>
+      <path d="M59 340 q-26 -16 -42 -6 q24 16 42 6 Z"/>
+      <path d="M132 280 q28 -18 46 -8 q-26 18 -46 8 Z"/>
+      <path d="M132 300 q-26 -16 -44 -6 q24 16 44 6 Z"/>
+      <path d="M97 400 q24 -16 40 -7 q-22 17 -40 7 Z"/>
+      <path d="M1849 350 q26 -18 44 -8 q-24 18 -44 8 Z"/>
+      <path d="M1849 370 q-26 -16 -42 -6 q24 16 42 6 Z"/>
+      <path d="M1893 440 q24 -16 24 -6 q-22 16 -24 6 Z"/>
+    </g>
+  </g>
+
+  <!-- 近景雾带（漫过鸟居腿，把主体往回推半步） -->
+  <rect x="0" y="690" width="1920" height="120" fill="url(#fognear)"/>
+
+  <!-- ============ 近景层 NEAR：水面数据网格·涟漪·倒影·水灯·月光带（清晰） ============ -->
+  <g stroke="#6FD9E7" stroke-width="1" opacity="0.05">
+    <line x1="0" y1="696" x2="1920" y2="696"/><line x1="0" y1="740" x2="1920" y2="740"/>
+    <line x1="0" y1="784" x2="1920" y2="784"/><line x1="0" y1="828" x2="1920" y2="828"/>
+    <line x1="0" y1="872" x2="1920" y2="872"/><line x1="0" y1="916" x2="1920" y2="916"/>
+    <line x1="0" y1="960" x2="1920" y2="960"/><line x1="0" y1="1004" x2="1920" y2="1004"/>
+  </g>
+  <g stroke="#6FD9E7" stroke-linecap="round">
+    <line x1="120" y1="718" x2="260" y2="718" stroke-width="2" opacity="0.16"/>
+    <line x1="640" y1="806" x2="760" y2="806" stroke-width="2" opacity="0.13"/>
+    <line x1="1010" y1="762" x2="1130" y2="762" stroke-width="2" opacity="0.15"/>
+    <line x1="1560" y1="894" x2="1700" y2="894" stroke-width="2" opacity="0.12"/>
+  </g>
+
+  <g fill="#E8C57C" opacity="0.3">
+    <circle cx="200" cy="720" r="1.6"/><circle cx="340" cy="680" r="1.2"/><circle cx="700" cy="760" r="1.4"/>
+    <circle cx="1080" cy="700" r="1.2"/><circle cx="1300" cy="840" r="1.4"/><circle cx="1780" cy="740" r="1.2"/>
+  </g>
+  <circle cx="520" cy="880" r="1.6" fill="#6FD9E7" opacity="0.3"/>
+  <circle cx="1240" cy="980" r="1.4" fill="#6FD9E7" opacity="0.25"/>
+
+  <!-- 水灯（四处，随波） -->
+  <g>
+    <g transform="translate(300,780) scale(1.1)">
+      <rect x="-14" y="-20" width="28" height="34" rx="5" fill="#E8C57C" opacity="0.9"/>
+      <path d="M-9 -24 L9 -24 L6 -18 L-6 -18 Z" fill="#D8544A"/>
+      <ellipse cx="0" cy="20" rx="34" ry="7" fill="#6FD9E7" opacity="0.28"/>
+    </g>
+    <g transform="translate(760,700) scale(0.85)" opacity="0.8">
+      <rect x="-14" y="-20" width="28" height="34" rx="5" fill="#E8C57C" opacity="0.9"/>
+      <path d="M-9 -24 L9 -24 L6 -18 L-6 -18 Z" fill="#D8544A"/>
+      <ellipse cx="0" cy="20" rx="34" ry="7" fill="#6FD9E7" opacity="0.25"/>
+    </g>
+    <g transform="translate(1150,930) scale(0.65)" opacity="0.6">
+      <rect x="-14" y="-20" width="28" height="34" rx="5" fill="#E8C57C" opacity="0.9"/>
+      <path d="M-9 -24 L9 -24 L6 -18 L-6 -18 Z" fill="#D8544A"/>
+      <ellipse cx="0" cy="20" rx="34" ry="7" fill="#6FD9E7" opacity="0.22"/>
+    </g>
+    <g transform="translate(1660,870) scale(0.75)" opacity="0.7">
+      <rect x="-14" y="-20" width="28" height="34" rx="5" fill="#E8C57C" opacity="0.9"/>
+      <path d="M-9 -24 L9 -24 L6 -18 L-6 -18 Z" fill="#D8544A"/>
+      <ellipse cx="0" cy="20" rx="34" ry="7" fill="#6FD9E7" opacity="0.22"/>
+    </g>
+  </g>
+
+  <!-- 水面月光带 -->
+  <g opacity="0.35">
+    <rect x="1462" y="640" width="12" height="170" rx="6" fill="#F2D998" opacity="0.6"/>
+    <rect x="1480" y="820" width="8" height="120" rx="4" fill="#F2D998" opacity="0.4"/>
+    <rect x="1444" y="812" width="6" height="90" rx="3" fill="#F2D998" opacity="0.3"/>
+  </g>
+
+  <!-- 底部暗角 -->
+  <rect x="0" y="900" width="1920" height="180" fill="url(#bottomfade)"/>
+
+  <!-- ============ 前景剪影 FOREGROUND：近处竹苇（暗·虚·溢出画面 → 透过竹林望月） ============ -->
+  <g filter="url(#fgblur)">
+    <!-- 左下竹丛（大而近） -->
+    <g fill="#060C1C" opacity="0.92">
+      <rect x="-28" y="740" width="26" height="400" rx="12"/>
+      <rect x="30" y="690" width="20" height="430" rx="10"/>
+      <rect x="72" y="810" width="16" height="310" rx="8"/>
+      <path d="M40 700 q64 -44 118 -20 q-58 46 -118 20 Z"/>
+      <path d="M50 766 q-58 -30 -96 -10 q54 36 96 10 Z"/>
+      <path d="M86 820 q58 -36 106 -12 q-52 42 -106 12 Z"/>
+      <path d="M36 690 q-44 -36 -78 -18 q42 40 78 18 Z"/>
+    </g>
+    <!-- 右下竹丛（镜像） -->
+    <g fill="#060C1C" opacity="0.92">
+      <rect x="1898" y="770" width="26" height="380" rx="12"/>
+      <rect x="1852" y="720" width="19" height="400" rx="10"/>
+      <rect x="1816" y="860" width="15" height="260" rx="8"/>
+      <path d="M1886 736 q-62 -42 -114 -18 q56 44 114 18 Z"/>
+      <path d="M1862 800 q-56 -30 -92 -8 q52 34 92 8 Z"/>
+      <path d="M1826 872 q-48 -30 -88 -10 q44 36 88 10 Z"/>
+      <path d="M1890 780 q44 -34 76 -14 q-40 36 -76 14 Z"/>
+    </g>
+    <!-- 左上垂叶一枝 -->
+    <g fill="#060C1C" opacity="0.85">
+      <path d="M-10 30 q86 26 128 88 q-52 -12 -78 -40 q-30 -28 -50 -48 Z"/>
+      <path d="M60 66 q40 -26 76 -16 q-36 32 -76 16 Z"/>
+      <path d="M96 110 q36 -18 66 -6 q-32 26 -66 6 Z"/>
+    </g>
+    <!-- 右上垂叶一枝 -->
+    <g fill="#060C1C" opacity="0.85">
+      <path d="M1930 20 q-80 30 -116 94 q50 -14 74 -44 q26 -30 42 -50 Z"/>
+      <path d="M1862 70 q-40 -24 -74 -12 q34 30 74 12 Z"/>
+      <path d="M1830 118 q-34 -16 -62 -2 q28 24 62 2 Z"/>
+    </g>
+  </g>
+</svg>
